@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {routing, RootComponent} from './routes';
 
-import {HelloComponent} from './controllers/hello';
+import {NavBarComponent} from './controllers/nav-bar';
 import {HomeComponent} from './controllers/home';
 import {AboutComponent} from './controllers/about';
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
@@ -14,11 +14,13 @@ import {HomeLearnerComponent} from './controllers/learner/homeLearner';
   ],
   declarations: [
     RootComponent,
-    HelloComponent,
+    NavBarComponent,
     HomeComponent,
     AboutComponent,
     HomeLearnerComponent
   ],
-  bootstrap: [RootComponent]
+  bootstrap: [RootComponent, NavBarComponent]
 })
-export class AppModule {}
+
+// let tutor_ = ['Home', 'New Evaluation', 'Learner Manager', 'View', 'Edit', 'Profile Manager'];
+export class AppModule { }

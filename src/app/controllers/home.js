@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'fountain-app',
+  selector: 'home',
   template: require('../views/home.html'),
   styleUrls: ['./app/styles/home.scss']
 })
