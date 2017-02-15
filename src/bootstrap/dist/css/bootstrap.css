@@ -1,4 +1,10 @@
 /*!
+ *Class for margin the main content
+*/
+.main-container {
+    margin-top: 7%;
+}
+/*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.

@@ -23,12 +23,8 @@ import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
   declarations: [
     RootComponent,
     NavBarComponent,
-<<<<<<< HEAD
-    HomeComponent,
-    AboutComponent,
     HomeLearnerComponent,
-    ProfileLearnerComponent
-=======
+    ProfileLearnerComponent,
     LoginComponent,
     RegisterComponent,
     HomeTutorComponent,
@@ -37,7 +33,6 @@ import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
     ViewLearnersComponent,
     EditLearnersComponent,
     HomeLearnerComponent
->>>>>>> develop
   ],
   bootstrap: [RootComponent, NavBarComponent]
 })
