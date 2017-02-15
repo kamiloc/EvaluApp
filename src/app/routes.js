@@ -17,14 +17,6 @@ export class RootComponent { }
 
 export const routes = [
   {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
     path: 'homeTutor',
     component: HomeTutorComponent
   },
