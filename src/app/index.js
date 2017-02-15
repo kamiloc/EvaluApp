@@ -26,12 +26,15 @@ import {HomeLearnerComponent} from './controllers/learner/homeLearner';
   declarations: [
     RootComponent,
     NavBarComponent,
+<<<<<<< HEAD
     HomeComponent,
     AboutComponent,
 <<<<<<< HEAD
     LoginComponent,
     RegisterComponent,
 =======
+=======
+>>>>>>> develop
     HomeTutorComponent,
     NewEvaluationComponent,
     ProfileTutorComponent,

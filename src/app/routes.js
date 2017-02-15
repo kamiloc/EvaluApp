@@ -24,6 +24,7 @@ export class RootComponent { }
 
 export const routes = [
   {
+<<<<<<< HEAD
     path: 'home',
     component: HomeComponent
   },
@@ -40,6 +41,8 @@ export const routes = [
     path: 'register',
     component: RegisterComponent
 =======
+=======
+>>>>>>> develop
     path: 'homeTutor',
     component: HomeTutorComponent
   },
