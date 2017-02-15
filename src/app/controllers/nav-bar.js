@@ -10,12 +10,12 @@ export class NavBarComponent {
     switch (rol) {
       case 'Tutor':
         this.isTutor = true;
-        this.elements = {firstView: 'New Evaluation', secondView: ['Learner Manager', 'New Learner', 'Edit Learnes'], thirdView: 'Profile Manager'};
+        this.elements = {firstView: 'New Evaluation', secondView: ['Learner Manager', 'View Learners', 'Edit Learnes'], thirdView: 'Profile Manager', home: '/homeTutor'};
         break;
 
       case 'Learner':
         this.isTutor = false;
-        this.elements = {fourthView: 'New Binnacle', fivethView: 'Profile Manager'};
+        this.elements = {fourthView: 'New Binnacle', fivethView: 'Profile Manager', home: '/homeLearner'};
         break;
 
       default:
