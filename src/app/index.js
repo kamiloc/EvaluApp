@@ -5,6 +5,7 @@ import {routing, RootComponent} from './routes';
 import {HelloComponent} from './controllers/hello';
 import {HomeComponent} from './controllers/home';
 import {AboutComponent} from './controllers/about';
+import {HomeLearnerComponent} from './controllers/learner/homeLearner';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {AboutComponent} from './controllers/about';
     RootComponent,
     HelloComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    HomeLearnerComponent
   ],
   bootstrap: [RootComponent]
 })
