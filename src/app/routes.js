@@ -12,6 +12,7 @@ import {EditLearnersComponent} from './controllers/tutor/editLearners';
 //  LearnerComponents
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
 import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
+import {NewBinnacleComponent} from './controllers/learner/newBinnacle';
 
 @Component({
   selector: 'fountain-root',
@@ -55,6 +56,10 @@ export const routes = [
   {
     path: 'profileLearner',
     component: ProfileLearnerComponent
+  },
+  {
+    path: 'newBinnacle',
+    component: NewBinnacleComponent
   }
 ];
 
