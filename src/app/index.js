@@ -14,6 +14,7 @@ import {EditLearnersComponent} from './controllers/tutor/editLearners';
 //  Learner Components
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
 import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
+import {NewBinnacleComponent} from './controllers/learner/newBinnacle';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
     ProfileTutorComponent,
     ViewLearnersComponent,
     EditLearnersComponent,
-    HomeLearnerComponent
+    HomeLearnerComponent,
+    NewBinnacleComponent
   ],
   bootstrap: [RootComponent, NavBarComponent]
 })
