@@ -2,11 +2,12 @@
 <div class="container">
     <div class="jumbotron">
       <h1 class="display-3 title">Register of Users</h1>
-      <p class="lead">Please select the way you want to register</p>
-      <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      <p class="lead title">Please select the way you want to register to show the corresponding form</p>
+      <p class="redirect"><button class="btn btn-lg btn-success"  role="button" (click)="changeRoll($event, 'tutor')">Tutor</button>
+      <button class="btn btn-lg btn-primary" role="button" (click)="changeRoll($event, 'learner')">Learner</button></p>
       </div>
   
-  <!--<form>
+  <form *ngIf='form'>
     <div class="container">
     <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
@@ -97,6 +98,6 @@
       </div>
     </div>
     </div>
-  </form>!-->
+  </form>
 </div>
  </div>

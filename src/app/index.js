@@ -5,6 +5,8 @@ import {routing, RootComponent} from './routes';
 import {NavBarComponent} from './controllers/nav-bar';
 import {HomeComponent} from './controllers/home';
 import {AboutComponent} from './controllers/about';
+import {LoginComponent} from './controllers/login';
+import {RegisterComponent} from './controllers/register';
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
 
 @NgModule({
@@ -17,6 +19,8 @@ import {HomeLearnerComponent} from './controllers/learner/homeLearner';
     NavBarComponent,
     HomeComponent,
     AboutComponent,
+    LoginComponent,
+    RegisterComponent,
     HomeLearnerComponent
   ],
   bootstrap: [RootComponent, NavBarComponent]

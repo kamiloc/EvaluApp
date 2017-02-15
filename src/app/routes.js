@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {HomeComponent} from './controllers/home';
 import {AboutComponent} from './controllers/about';
+import {LoginComponent} from './controllers/login';
+import {RegisterComponent} from './controllers/register';
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
 
 @Component({
@@ -18,6 +20,14 @@ export const routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'homeLearner',

@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-const rol = 'learner';
 
 @Component({
   selector: 'fountain-app',
@@ -7,8 +6,12 @@ const rol = 'learner';
   styleUrls: ['./app/styles/register.scss']
 })
 export class RegisterComponent {
-  constructor() {
-    switch (rol) {
+  form = false;
+
+  changeRoll(event, newRoll) {
+    event.preventDefault();
+    this.form = true;
+    switch (newRoll) {
       case 'tutor':
         this.isTutor = true;
         break;
