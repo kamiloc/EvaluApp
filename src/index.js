@@ -4,7 +4,7 @@ import 'zone.js/dist/zone';
 import '@angular/common';
 import 'rxjs';
 
-import './index.scss';
+import './bootstrap/dist/css/bootstrap.css';
 
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
