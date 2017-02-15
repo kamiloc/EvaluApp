@@ -1,0 +1,80 @@
+<div class="container main-container form">
+
+<h1 class="text-style">Profile Manager</h1>
+
+  <form class="text-style">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label>Last Name:</label>
+      <input type="text" class="form-control" id="lastname">
+    </div>
+
+    <div class="form-group">
+      <label>E-mail:</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+
+    <div class="form-group" *ngIf="isLearner">
+      <label>Program:</label>
+      <input type="text" class="form-control" id="program">
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <select type="text" class="form-control" id="gender">
+          <option>...</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+    </div>
+
+    <div class="form-group" *ngIf="isLearner">
+      <label>Training Center:</label>
+      <input type="text" class="form-control" id="center">
+    </div>
+
+    <div class="form-group" *ngIf="isLearner">
+      <label>Group Card:</label>
+      <input type="number" class="form-control" id="card">
+    </div>
+
+    <div class="form-group" *ngIf="isLearner">
+      <label>City:</label>
+      <input type="text" class="form-control" id="city">
+    </div>
+
+    <div class="form-group" *ngIf="isLearner">
+      <label>Regional:</label>
+      <input type="text" class="form-control" id="regional">
+    </div>
+
+    <div class="form-group">
+      <label>Phone:</label>
+      <input type="number" class="form-control" id="phone">
+    </div>
+
+    <div class="form-group" *ngIf="isTutor">
+      <label>Position:</label>
+      <input type="text" class="form-control" id="position">
+    </div>
+
+    <div class="form-group" *ngIf="isTutor">
+      <label>Studio:</label>
+      <input type="text" class="form-control" id="studio">
+    </div>
+    
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+
+  </form>
+</div>

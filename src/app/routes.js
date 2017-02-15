@@ -3,6 +3,7 @@ import {RouterModule} from '@angular/router';
 import {HomeComponent} from './controllers/home';
 import {AboutComponent} from './controllers/about';
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
+import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
 
 @Component({
   selector: 'fountain-root',
@@ -22,6 +23,10 @@ export const routes = [
   {
     path: 'homeLearner',
     component: HomeLearnerComponent
+  },
+  {
+    path: 'profileLearner',
+    component: ProfileLearnerComponent
   }
 ];
 

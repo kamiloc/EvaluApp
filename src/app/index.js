@@ -6,6 +6,7 @@ import {NavBarComponent} from './controllers/nav-bar';
 import {HomeComponent} from './controllers/home';
 import {AboutComponent} from './controllers/about';
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
+import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import {HomeLearnerComponent} from './controllers/learner/homeLearner';
     NavBarComponent,
     HomeComponent,
     AboutComponent,
-    HomeLearnerComponent
+    HomeLearnerComponent,
+    ProfileLearnerComponent
   ],
   bootstrap: [RootComponent, NavBarComponent]
 })

@@ -7,6 +7,8 @@ import {Component} from '@angular/core';
 })
 export class HomeLearnerComponent {
   constructor() {
-    this.tittle = 'Welcome Learner';
+    this.tittle = 'Hello Learner';
+    this.tutor = 'Gabriel Martinez Neira';
+    this.position = 'Web UI Developer';
   }
 }
