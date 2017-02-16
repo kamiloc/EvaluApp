@@ -7,6 +7,17 @@
     text-align: center;
     width: 85%;
 }
+p{
+    animation-delay: .5s;
+}
+
+.tutor {
+    animation-delay: 1.6s;
+}
+.learner {
+    animation-delay: 2.5s;
+}
+
 .redirect {
 margin: 0 auto;
 }
@@ -14,6 +25,7 @@ margin: 0 auto;
 form {
 margin: 4% auto;
 width: 85%;
+animation-delay: .5s;
 }
 
 form label {
