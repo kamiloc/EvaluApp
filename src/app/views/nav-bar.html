@@ -5,7 +5,9 @@
       <div id="icon-nav">
         
       </div>
-      <a class="navbar-brand" href="/home">EvaluApp</a>
+      
+      <a class="navbar-brand" href="/homeTutor" *ngIf="isTutor">EvaluApp</a>
+      <a class="navbar-brand" href="/homeLearner" *ngIf="isLearner">EvaluApp</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -26,10 +28,10 @@
             <a class="nav-link" href="/profileTutor" >{{elements.thirdView}}</a>
           </li>
           <li class="nav-item" *ngIf="isLearner">
-            <a class="nav-link" href="about">{{elements.fourthView}}</a>
+            <a class="nav-link" href="/newBinnacle">{{elements.fourthView}}</a>
           </li>
           <li class="nav-item" *ngIf="isLearner">
-            <a class="nav-link" href="about">{{elements.fivethView}}</a>
+            <a class="nav-link" href="/profileLearner">{{elements.fivethView}}</a>
           </li>
         </ul>
       </div>
