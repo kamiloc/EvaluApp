@@ -9,7 +9,6 @@ export class HomeTutorComponent {
   constructor() {
     this.tittle = 'Welcome Master';
     this.learners = 3;
-    this.tittle = 'Learners';
-    this.message = 'They are your trooper, ready to learn all you can take. The evaluation is a requisit, please submit the form';
+    this.popOver = 'They are your trooper, ready to learn all you can take, but, they need you do the evaluations for obtain their certification. You can do it!';
   }
 }
