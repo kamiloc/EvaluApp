@@ -6,14 +6,16 @@
         <p><a class="btn btn-lg btn-success" href="/newEvaluation" role="button">Create a new evaluation</a></p>
     </div>
     <hr class="featurette-divider">
-    <div class="jumbotron">
-        <div class="learners">
-            <h1 class="display-4">Learners in:</h1>
-            <br>
-            <h1 class="display-1 learners-num">{{learners}}</h1>
-        </div>
-        <div class="learners">
-            <img class="trooper" src="../../img/tutor/trooper.png" alt="Trooper">
-        </div>
+
+    <div class="learners jumbotron">
+        <h1 class="display-4">Learners in:</h1>
+        <br>
+        <h1 class="display-1 learners-num">{{learners}}</h1>
+    </div>
+    <div class="learners">
+        <img id="trooper" class="trooper" src="../../img/tutor/trooper.png" alt="Trooper" 
+        placement="right"
+        ngbPopover="{{popOver}}" popoverTitle="They are your trooper"
+        triggers="load">
     </div>
 </div>

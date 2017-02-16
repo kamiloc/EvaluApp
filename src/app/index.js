@@ -15,11 +15,14 @@ import {EditLearnersComponent} from './controllers/tutor/editLearners';
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
 import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
 import {NewBinnacleComponent} from './controllers/learner/newBinnacle';
+// NgBootstrap
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     BrowserModule,
-    routing
+    routing,
+    NgbModule.forRoot()
   ],
   declarations: [
     RootComponent,
