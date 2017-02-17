@@ -10,9 +10,16 @@ export class ProfileTutorComponent {
     name: 'Gabriel', lastName: 'Martines',
     phone: '489-1340', position: 'Web UI Developer', studio: 'UX Desing',
     email: 'gabriel.martinez', gender: 'Male', password: '12345678'};
+  newPassword = '';
+  confPassword = '';
   constructor() {
     this.tittle = 'Edit your information';
     this.form = true;
     this.isTutor = true;
+  }
+  changePassword() {
+    if (this.newPassword === '') {
+      this.confPassword = '';
+    }
   }
 }

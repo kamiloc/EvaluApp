@@ -6,6 +6,7 @@ const rol = 'Learner';
   template: require('../views/nav-bar.html')
 })
 export class NavBarComponent {
+  hidden = true;
   constructor() {
     switch (rol) {
       case 'Tutor':
@@ -19,6 +20,7 @@ export class NavBarComponent {
         break;
 
       default:
+        this.hidden = false;
         break;
     }
     this.isLearner = !this.isTutor;
