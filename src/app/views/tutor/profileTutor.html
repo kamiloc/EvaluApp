@@ -1,4 +1,4 @@
-<div class="container main-container jumb">
+<div class="container main-container">
 
     <div class="jumbotron">
         <h1 class="display-4">{{tittle}}</h1>
@@ -29,16 +29,41 @@
                         <label for="email">E-mail:</label>
                         <div class="input-group">
                             <input type="text" class="form-control" id="email" required name="email"
+                            minlength="6" maxlength="24"
                             [(ngModel)]="tutor.email" #email="ngModel">
                             <span class="input-group-addon" id="basic-addon2">@globant.com</span>
                         </div>
+                        <!--Validations-->
+                        <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+                            <div [hidden]="!email.errors.required">
+                            -Email is required
+                            </div>
+                            <div [hidden]="!email.errors.minlength">
+                            -Email must be at least 6 characters long.
+                            </div>
+                        </div>
+                        <!--End Validation-->
                     </div>
                 </div>
                 <div class="col-5">
                     <div class="form-group" *ngIf="isTutor">
                         <label for="position">Position:</label>
                         <input type="text" class="form-control" id="position" required name="position"
+                        minlength="4" maxlength="24" pattern="^([\sA-Za-z]+)$"
                         [(ngModel)]="tutor.position" #position="ngModel">
+                        <!--Validations-->
+                        <div *ngIf="position.errors && (position.dirty || position.touched)" class="alert alert-danger">
+                            <div [hidden]="!position.errors.required">
+                            -Position is required
+                            </div>
+                            <div [hidden]="!position.errors.minlength">
+                            -Position must be at least 4 characters long.
+                            </div>
+                            <div [hidden]="!position.errors.pattern">
+                            -Only can write letters
+                            </div>
+                        </div>
+                    <!--End Validation-->
                     </div>
                 </div>
             </div>
@@ -48,14 +73,42 @@
                     <div class="form-group">
                         <label for="phone">Phone:</label>
                         <input type="text" class="form-control" id="phone" required name="phone"
+                        minlength="6" maxlength="10" pattern="^[0-9]*$"
                         [(ngModel)]="tutor.phone" #phone="ngModel">
+                        <!--Validations-->
+                        <div *ngIf="phone.errors && (phone.dirty || phone.touched)" class="alert alert-danger">
+                            <div [hidden]="!phone.errors.required">
+                            -Phone is required.
+                            </div>
+                            <div [hidden]="!phone.errors.minlength">
+                            -Phone must be at least 6 characters long.
+                            </div>
+                            <div [hidden]="!phone.errors.pattern">
+                            -Only can write 0 - 9 numbers
+                            </div>
+                        </div>
+                    <!--End Validation-->
                     </div>
                 </div>
                 <div class="col-5">
                     <div class="form-group">
                         <label for="studio">Studio:</label>
                         <input type="text" class="form-control" id="studio" required name="studio"
+                        minlength="7" maxlength="24" pattern="^([\sA-Za-z]+)$"
                         [(ngModel)]="tutor.studio" #studio="ngModel">
+                        <!--Validations-->
+                        <div *ngIf="studio.errors && (studio.dirty || studio.touched)" class="alert alert-danger">
+                            <div [hidden]="!studio.errors.required">
+                            -Studio is required.
+                            </div>
+                            <div [hidden]="!studio.errors.minlength">
+                            -Studio must be at least 7 characters long.
+                            </div>
+                            <div [hidden]="!studio.errors.pattern">
+                            -Only can write letters
+                            </div> 
+                        </div>
+                    <!--End Validation-->
                     </div>
                 </div>
             </div>
@@ -65,13 +118,30 @@
                 <div class="col-5">
                     <div class="form-group">
                         <label for="password">New Password:</label>
-                        <input type="password" class="form-control" id="password" required name="password" >
+                        <input type="password" class="form-control" id="password" name="password"
+                        minlength="8"
+                        [(ngModel)]="newPassword" #password="ngModel" (keyup)="changePassword()">
+                        <!--Validations-->
+                        <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger" >
+                            <div [hidden]="!password.errors.minlength">
+                            -Password must be at least 8 characters long.
+                            </div>
+                        </div>
+                    <!--End Validation-->
                     </div>
                 </div>
                 <div class="col-5">
                     <div class="form-group">
                         <label for="conf-password">Confirm new password:</label>
-                        <input type="password" class="form-control" id="conf-password" required name="confirm" >
+                        <input type="password" class="form-control" id="conf-password" name="confirm"
+                        [disabled]="newPassword == '' || password.errors "
+                        [(ngModel)]="confPassword" #confirm='ngModel'>
+                        <!--Validations-->
+                        <div *ngIf="newPassword != '' && !password.errors && newPassword != confPassword"
+                        class="alert alert-danger">                            
+                            -Password don't match'
+                        </div>
+                    <!--End Validation-->
                     </div>
                 </div>
             </div>
