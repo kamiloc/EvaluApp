@@ -7,6 +7,6 @@ import {Component} from '@angular/core';
 })
 export class LoginComponent {
   constructor() {
-    this.tittle = 'Login';
+    this.tittle = 'Login of Users';
   }
 }
