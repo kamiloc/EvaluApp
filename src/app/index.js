@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 import {routing, RootComponent} from './routes';
 import {NavBarComponent} from './controllers/nav-bar';
 // Sign in and Sign Up
@@ -21,6 +22,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     routing,
     NgbModule.forRoot()
   ],
