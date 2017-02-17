@@ -19,11 +19,16 @@
 
             <div class="row">
                 <div class="col-md-3">
-                    <div class="form-group">
-                        <label>Date:</label>
-                        <input type="date" class="form-control" id="date">
+                    <label>Date:</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd"
+                                name="dp" [(ngModel)]="modelDay" ngbDatepicker #d="ngbDatepicker">
+                        <div class="input-group-addon" (click)="d.toggle()" >
+                            <img src="../../img/learner/icon-calendar.png" style="width: 1rem; height: 1rem; cursor: pointer;"/>
+                        </div>
                     </div>
                 </div>
+                <pre>{{ modelDay | json }}</pre>
 
                 <div class="col-md-3">
                     <div class="form-group">
@@ -62,7 +67,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Number:</label>
-                        <input type="text" class="form-control" id="number">
+                        <input type="text" class="form-control" id="document">
                     </div>
                 </div>
             </div>
@@ -95,21 +100,24 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Name:</label>
-                        <input type="text" class="form-control" id="nameCompany">
+                        <input type="text" class="form-control" id="nameCompany" name="nameCompany" readonly
+                        [(ngModel)]="company.name" #nameCompany="ngModel">
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Nit:</label>
-                        <input type="text" class="form-control" id="nit">
+                        <input type="text" class="form-control" id="nit" name="nit" readonly
+                        [(ngModel)]="company.nit" #nit="ngModel">
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>City:</label>
-                        <input type="text" class="form-control" id="cityCompany">
+                        <input type="text" class="form-control" id="cityCompany" name="cityCompany" readonly
+                        [(ngModel)]="company.city" #cityCompany="ngModel">
                     </div>
                 </div>
             </div>
@@ -118,21 +126,27 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Address:</label>
-                        <input type="text" class="form-control" id="address">
+                        <input type="text" class="form-control" id="address" name="address" readonly
+                        [(ngModel)]="company.address" #address="ngModel">
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Phone:</label>
-                        <input type="text" class="form-control" id="phoneCompany">
-                    </div>
+                        <input type="text" class="form-control" id="phoneCompany" name="phoneCompany" readonly
+                        [(ngModel)]="company.phone" #phoneCompany="ngModel">
+               Company     </div>
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-5">
                     <div class="form-group">
                         <label>Email:</label>
-                        <input type="email" class="form-control" id="email">
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="email" name="email" readonly
+                            [(ngModel)]="tutor.email" #email="ngModel">
+                            <span class="input-group-addon">@globant.com</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,22 +154,25 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
-                        <label>Name of immediate boss:</label>
-                        <input type="text" class="form-control" id="nameBoss">
+                        <label>Name of immediate :</label>
+                        <input type="text" class="form-control" id="nameTutor" name="nameTutor" readonly
+                        [(ngModel)]="tutor.name" #nameTutor="ngModel">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Position:</label>
-                        <input type="text" class="form-control" id="positionBoss">
+                        <input type="text" class="form-control" id="position" name="position" readonly
+                        [(ngModel)]="tutor.position" #position="ngModel">
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Phone:</label>
-                        <input type="text" class="form-control" id="phoneBoss">
+                        <input type="text" class="form-control" id="phone" name="phone" readonly
+                        [(ngModel)]="tutor.phone" #phone="ngModel">
                     </div>
                 </div>
             </div>
@@ -206,26 +223,44 @@
        <div class="col-md-6">
            <div class="firm">
                 <hr color="black">
-                <p class="text-center">Firma</p>
+                <p class="text-center">Firm</p>
            </div>
-            <label>Seguimiento realizado por:</label>
+            <label>Followed by:</label>
             <input type="text" class="form-control" id="instructor">
        </div>
 
        <div class="col-md-6">
             <label>Reported period:</label>
-            <div class="input-group">
-                <span class="input-group-addon">Del</span>
-                <input id="dateStart" type="text" class="form-control">
-                <span class="input-group-addon">Al</span>
-                <input id="dateEnd" type="text" class="form-control">
+            
+            <div class="row">
+                <div class="input-group col-md-6">
+                    <span class="input-group-addon">Of the</span>
+                    <input class="form-control" placeholder="yyyy-mm-dd"
+                            name="dp2" [(ngModel)]="modelInit" ngbDatepicker #d2="ngbDatepicker">
+                    <div class="input-group-addon" (click)="d2.toggle()" >
+                        <img src="../../img/learner/icon-calendar.png" style="width: 1rem; height: 1rem; cursor: pointer;"/>
+                    </div>
+                </div>
+                <pre>{{ modelInit | json }}</pre>
+
+                <div class="input-group col-md-6">
+                    <span class="input-group-addon">To the</span>
+                    <input class="form-control" placeholder="yyyy-mm-dd"
+                            name="dp3" [(ngModel)]="modelEnd" ngbDatepicker #d3="ngbDatepicker">
+                    <div class="input-group-addon" (click)="d3.toggle()" >
+                        <img src="../../img/learner/icon-calendar.png" style="width: 1rem; height: 1rem; cursor: pointer;"/>
+                    </div>
+                </div>
+                <pre>{{ modelEnd | json }}</pre>
             </div>
-            <p class="text-center">(el periodo debe ser quincenal durante toda la etapa productiva)</p>
+
+            <p class="text-center">(The period must be fortnightly throughout the productive period)</p>
 
             <div class="firm">
                 <hr color="black">
-                <p class="text-center">Vo. Bo. Jefe Inmediato</p>
+                <p class="text-center">Vo. Bo. Immediate Boss</p>
             </div>
+
        </div>
    </div>
         

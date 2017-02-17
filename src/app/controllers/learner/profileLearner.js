@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-const Roll = 'learner';
 
 @Component({
   selector: 'fountain-app',
@@ -8,20 +7,16 @@ const Roll = 'learner';
 })
 export class ProfileLearnerComponent {
 
+  learner = {
+    name: 'Carlos Stiven', lastName: 'Robayo Castillo',
+    email: 'carlos.robayo', regional: 'Cundinamarca',
+    city: 'Girardot', program: 'Analisis y desarrollo de sistemas de informacion',
+    card: '902917', center: 'Centro de la tecnologia del diseño y la productividad empresarial',
+    phone: '3114436081', password: '97071215044'
+  };
+
   constructor() {
-    switch (Roll) {
-      case 'tutor':
-        this.isTutor = true;
-        break;
-
-      case 'learner':
-        this.isTutor = false;
-        break;
-
-      default:
-        break;
-    }
-    this.isLearner = !this.isTutor;
+    this.isLearner = true;
   }
 
 }
