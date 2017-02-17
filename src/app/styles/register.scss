@@ -1,21 +1,26 @@
 .view {
-    margin-top: 10%;
+    margin-top: 7%;
 }
 .jumbotron {
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 0 auto 5%;
     text-align: center;
     width: 85%;
 }
-p{
-    animation-delay: .5s;
+
+img {
+    animation-delay: 1s;
+}
+
+p {
+    animation-delay: 1.9s;
 }
 
 .tutor {
-    animation-delay: 1.6s;
+    animation-delay: 2.8s;
 }
 .learner {
-    animation-delay: 2.5s;
+    animation-delay: 3.3s;
 }
 
 .redirect {

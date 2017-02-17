@@ -1,7 +1,8 @@
 <div class="container view">
     <div class="jumbotron">
       <h1 class="display-3">{{tittle}}</h1>
-      <p class="lead animated fadeIn">Please select the way you want to register to show the corresponding form</p>
+      <p class="lead animated fadeIn">Please choose which side of the force you want to be and so know how you are going to register</p>
+      <img width="25%" src="/app/img/dark.png" alt="Dark" class="animated fadeIn">
       <p class="redirect"><button class="btn btn-lg btn-success tutor animated fadeInLeft"  role="button" (click)="changeRoll($event, 'tutor')">Tutor</button>
       <button class="btn btn-lg btn-primary learner animated fadeInRight" role="button" (click)="changeRoll($event, 'learner')">Learner</button></p>
       </div>
@@ -27,11 +28,15 @@
 
       <div class="row">
         <div class="col-6">
-          <div class="form-group">
-            <label for="inputPassword3">E-mail:</label>
-            <input type="email" class="form-control" id="email">
-          </div>
-        </div>
+          <div class="form-group"> 
+            <label>E-mail</label> 
+            <div class="form-group input-group"> 
+               <input type="email" class="form-control" id="email"> 
+               <span class="input-group-addon">@globant.com</span>
+              </div> 
+           </div> 
+       </div>
+
         <div class="col-6">
           <div class="form-group">
             <label for="inputPassword3">Gender:</label>
