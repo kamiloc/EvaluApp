@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Tutor} from './classTutor';
 
 @Component({
   selector: 'profile-tutor',
@@ -6,16 +7,16 @@ import {Component} from '@angular/core';
   styleUrls: ['./app/styles/tutor/profileTutor.scss']
 })
 export class ProfileTutorComponent {
-  tutor = {
-    name: 'Gabriel', lastName: 'Martines',
-    phone: '489-1340', position: 'Web UI Developer', studio: 'UX Desing',
-    email: 'gabriel.martinez', gender: 'Male', password: '12345678'};
+  oldTutor = new Tutor('Gabriel', 'Martines', '489-1340', 'Web UI Developer', 'UX Desing',
+  'gabriel.martinez', 'Male', '12345678');
+  tutor = new Tutor();
   newPassword = '';
   confPassword = '';
   constructor() {
     this.tittle = 'Edit your information';
     this.form = true;
     this.isTutor = true;
+    this.tutor = this.oldTutor;
   }
   changePassword() {
     if (this.newPassword === '') {
