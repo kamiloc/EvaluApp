@@ -6,6 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./app/styles/register.scss']
 })
 export class RegisterComponent {
+  tittle = 'Register of Users';
   form = false;
 
   changeRoll(event, newRoll) {
