@@ -33,14 +33,20 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>City:</label>
-                        <input type="text" class="form-control" id="city">
+                        <input type="text" class="form-control" id="city" 
+                        ngbPopover="Name of the city where the apprentice training center is located." 
+                        popoverTitle="Training center"
+                        triggers="mouseenter:mouseleave">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Center:</label>
-                        <input type="text" class="form-control" id="center">
+                        <input type="text" class="form-control" id="center"
+                        ngbPopover="Name of the apprentice training center." 
+                        popoverTitle="Training center"
+                        triggers="mouseenter:mouseleave">
                     </div>
                 </div>
             </div>
@@ -49,7 +55,10 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Name:</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name"
+                        ngbPopover="Name of the apprentice." 
+                        popoverTitle="Apprentice"
+                        triggers="mouseenter:mouseleave">
                     </div>
                 </div>
 
@@ -67,7 +76,21 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Number:</label>
-                        <input type="text" class="form-control" id="document">
+                        <input type="text" class="form-control" id="document" name="document" required pattern="^[0-9]*$"
+                        [(ngModel)]="numDocument" #document="ngModel"
+                        ngbPopover="Apprentice document number." 
+                        popoverTitle="Apprentice"
+                        triggers="mouseenter:mouseleave">
+                        <!-- VALIDATIONS -->
+                        <div *ngIf="document.errors && (document.dirty || document.touched)" class="alert alert-danger">
+                            <div [hidden]="!document.errors.required">
+                                * Document number is required
+                            </div>
+                            <div [hidden]="!document.errors.pattern">
+                                * Only can write 0 - 9 numbers
+                            </div>
+                        </div>
+                        <!-- END VALIDATIONS -->
                     </div>
                 </div>
             </div>
@@ -76,14 +99,34 @@
                 <div class="col-md-7">
                     <div class="form-group">
                         <label>Program:</label>
-                        <input type="text" class="form-control" id="program">
+                        <input type="text" class="form-control" id="program"
+                        ngbPopover="Name of the apprentice training program." 
+                        popoverTitle="Apprentice"
+                        triggers="mouseenter:mouseleave">
                     </div>
                 </div>
 
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Group Card:</label>
-                        <input type="text" class="form-control" id="card">
+                        <input type="text" class="form-control" id="card" name="card" minlength="6" required pattern="^[0-9]*$"
+                        [(ngModel)]="groupCard" #card="ngModel"
+                        ngbPopover="Training program card number." 
+                        popoverTitle="Apprentice"
+                        triggers="mouseenter:mouseleave">
+                        <!-- VALIDATIONS -->
+                        <div *ngIf="card.errors && (card.dirty || card.touched)" class="alert alert-danger">
+                            <div [hidden]="!card.errors.required">
+                                * Card is required
+                            </div>
+                             <div [hidden]="!card.errors.minlength">
+                                * Card must be at least 6 characters long.
+                            </div>
+                            <div [hidden]="!card.errors.pattern">
+                                * Only can write 0 - 9 numbers
+                            </div>
+                        </div>
+                        <!-- END VALIDATIONS -->
                     </div>
                 </div>
             </div>

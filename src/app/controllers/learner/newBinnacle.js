@@ -7,6 +7,9 @@ import {Component} from '@angular/core';
 })
 export class NewBinnacleComponent {
 
+  groupCard = '';
+  numDocument = '';
+
   tutor = {
     name: 'Gabriel Martines', phone: '489-1340',
     position: 'Web UI Developer', email: 'gabriel.martinez'
