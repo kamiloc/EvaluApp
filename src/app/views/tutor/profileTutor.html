@@ -134,11 +134,10 @@
                     <div class="form-group">
                         <label for="conf-password">Confirm new password:</label>
                         <input type="password" class="form-control" id="conf-password" name="confirm"
-                        [disabled]="newPassword == '' || password.errors "
+                        [disabled]="newPassword == '' || password.errors"
                         [(ngModel)]="confPassword" #confirm='ngModel'>
                         <!--Validations-->
-                        <div *ngIf="newPassword != '' && !password.errors && newPassword != confPassword"
-                        class="alert alert-danger">                            
+                        <div *ngIf="newPassword != '' && !password.errors && newPassword != confPassword" class="alert alert-danger">                            
                             -Password don't match'
                         </div>
                     <!--End Validation-->

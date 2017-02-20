@@ -35,9 +35,19 @@
           <label>Email:</label>
           <div class="input-group">
             <input type="email" class="form-control" id="email" name="email"
-            [(ngModel)]="learner.email" #email="ngModel">
+            [(ngModel)]="learner.email" #email="ngModel" required minlength="6" maxlength="24">
             <span class="input-group-addon">@globant.com</span>
           </div>
+          <!-- VALIDATIONS -->
+          <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+            <div [hidden]="!email.errors.required">
+              * Email is required
+            </div>
+            <div [hidden]="!email.errors.minlength">
+              * Email must be at least 6 characters long.
+            </div>
+          </div>
+          <!-- END VALIDATIONS -->
         </div>
       </div>
 
@@ -107,29 +117,59 @@
         <div class="form-group">
           <label>Phone:</label>
           <input type="text" class="form-control" id="phone" name="phone"
-          [(ngModel)]="learner.phone" #phone="ngModel">
+          [(ngModel)]="learner.phone" #phone="ngModel" minlength="6" maxlength="10" pattern="^[0-9]*$" required>
+          <!-- VALIDATIONS -->
+          <div *ngIf="phone.errors && (phone.dirty || phone.touched)" class="alert alert-danger">
+            <div [hidden]="!phone.errors.required">
+              * Phone is required
+            </div>
+            <div [hidden]="!phone.errors.minlength">
+              * Phone must be at least 6 characters long.
+            </div>
+            <div [hidden]="!phone.errors.pattern">
+              * Only can write 0 - 9 numbers
+            </div>
+          </div>
+          <!-- END VALIDATIONS -->
         </div>
       </div>
       
       <div class="col-md-4">
         <div class="form-group">
-          <label>Password:</label>
+          <label>New Password:</label>
           <input type="password" class="form-control" id="password" name="password"
-          [(ngModel)]="learner.password" #password="ngModel">
+          [(ngModel)]="newPassword" #password="ngModel" (keyup)="changePassword()" minlength="8">
+
+          <!--Validations-->
+            <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger" >
+              <div [hidden]="!password.errors.minlength">
+                * Password must be at least 8 characters long.
+              </div>
+            </div>
+          <!--End Validation-->
+
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="form-group">
-          <label>New Password:</label>
-          <input type="password" class="form-control" id="password" name="password"
-          [(ngModel)]="learner.password" #password="ngModel">
+          <label>Confirm Password:</label>
+          <input type="password" class="form-control" id="conPassword" name="conPassword"
+          [disabled]="newPassword == '' || password.errors"
+          [(ngModel)]="confPassword" #conPassword="ngModel">
+
+          <!--Validations-->
+            <div *ngIf="newPassword != '' && !password.errors && newPassword != confPassword" class="alert alert-danger">                            
+              * Password don't match'
+            </div>
+          <!--End Validation-->
+
         </div>
       </div>
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Save</button>
     </div>
 
   </form>

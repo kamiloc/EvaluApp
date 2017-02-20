@@ -15,8 +15,17 @@ export class ProfileLearnerComponent {
     phone: '3114436081', password: '97071215044'
   };
 
+  newPassword = '';
+  confPassword= '';
+
   constructor() {
     this.isLearner = true;
+  }
+
+  changePassword() {
+    if (this.newPassword === '') {
+      this.confPassword = '';
+    }
   }
 
 }
