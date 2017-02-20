@@ -15,13 +15,25 @@
         <div class="col-6">
           <div class="form-group">
             <label for="inputEmail3">Name:</label>
-            <input type="text" class="form-control" id="name">
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="date.name" #name="ngModel" required>
+               <!--Validations -->
+                <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+                <div [hidden]="!name.errors.required">
+                  -Name is required.
+                </div>
+              </div>
           </div>
         </div>
         <div class="col-6">
           <div class="form-group">
             <label for="inputPassword3">Lastname:</label>
-            <input type="text" class="form-control" id="lastname">
+            <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="date.lastName" #lastname="ngModel" required>
+            <!--Validations -->
+                <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+                <div [hidden]="!lastname.errors.required">
+                  -Lastname is required.
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -31,10 +43,16 @@
           <div class="form-group">
               <label for="email">E-mail:</label>
               <div class="input-group">
-                  <input type="text" class="form-control" id="email" required >
+                  <input type="text" class="form-control" id="email" name="email" [(ngModel)]="date.email" #email="ngModel" required minlength="6" maxlength="24">
                   <span class="input-group-addon" id="basic-addon2">@globant.com</span>
               </div>
-          </div>
+                  <!--Validations -->
+                <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+                <div [hidden]="!email.errors.required">
+                  -E-mail is required.
+                </div>
+              </div>
+        </div>
         </div>
         <div class="col-6">
           <div class="form-group">
@@ -52,33 +70,69 @@
         <div class="col-6">
           <div class="form-group" *ngIf="isLearner">
             <label for="inputPassword3">Regional:</label>
-            <input type="text" class="form-control" id="local">
-          </div>
+            <input type="text" class="form-control" id="local" name="regional" [(ngModel)]="date.regional" #regional="ngModel" required>
+              <!--Validations -->
+                <div *ngIf="regional.errors && (regional.dirty || regional.touched)" class="alert alert-danger">
+                <div [hidden]="!regional.errors.required">
+                  -Regional is required.
+                </div>
+              </div>
+         </div>
         </div>
         <div class="col-6">
           <div class="form-group" *ngIf="isLearner">
             <label for="inputPassword3">City</label>
-            <input type="text" class="form-control" id="city">
+            <input type="text" class="form-control" id="city" name="city" [(ngModel)]="date.city" #city="ngModel" required>
+             <!--Validations -->
+                <div *ngIf="city.errors && (city.dirty || city.touched)" class="alert alert-danger">
+                <div [hidden]="!city.errors.required">
+                  -City is required.
+                </div>
+              </div>
           </div>
         </div>
       </div>
 
       <div class="form-group" *ngIf="isLearner">
         <label for="inputPassword3">Training Program:</label>
-        <input type="text" class="form-control" id="program">
+        <input type="text" class="form-control" id="program" name="program" [(ngModel)]="date.program" #program="ngModel" required>
+         <!--Validations -->
+                <div *ngIf="program.errors && (program.dirty || program.touched)" class="alert alert-danger">
+                <div [hidden]="!program.errors.required">
+                  -Training Program is required.
+                </div>
+              </div>
       </div>
 
       <div class="row">
         <div class="col-6">
           <div class="form-group" *ngIf="isLearner">
             <label for="inputPassword3">Group Card:</label>
-            <input type="text" class="form-control" id="center">
+            <input type="text" class="form-control" id="center" name="card" [(ngModel)]="date.card" #card="ngModel" minlength="6" maxlength="10" pattern="^[0-9]*$" required>
+             <!--Validations -->
+          <div *ngIf="card.errors && (card.dirty || card.touched)" class="alert alert-danger">
+                <div [hidden]="!card.errors.required">
+                  -Group Card is required.
+                </div>
+              <div [hidden]="!card.errors.minlength">
+                 -Group Card must be at least 6 characters long.
+                </div>
+              <div [hidden]="!card.errors.pattern">
+                 -Only can write 0 - 9 numbers
+                </div>
+          </div>
           </div>
         </div>
         <div class="col-6">
           <div class="form-group" *ngIf="isLearner">
             <label for="inputPassword3">Training Center:</label>
-            <input type="number" class="form-control" id="card">
+            <input type="text" class="form-control" id="card" name="center" [(ngModel)]="date.center" #center="ngModel" required>
+                 <!--Validations -->
+                <div *ngIf="center.errors && (center.dirty || center.touched)" class="alert alert-danger">
+                <div [hidden]="!center.errors.required">
+                  -Training Center is required.
+                </div>
+              </div>
           </div>
         </div>
 
@@ -88,31 +142,81 @@
         <div class="col-6">
           <div class="form-group" *ngIf="isTutor">
             <label for="inputPassword3">Position:</label>
-            <input type="text" class="form-control" id="position">
+            <input type="text" class="form-control" id="position" name="position" [(ngModel)]="date.position" #position="ngModel" required>
+          <!--Validations -->
+                <div *ngIf="position.errors && (position.dirty || position.touched)" class="alert alert-danger">
+                <div [hidden]="!position.errors.required">
+                  -Position is required.
+                </div>
+              </div>
           </div>
         </div>
         <div class="col-6">
           <div class="form-group" *ngIf="isTutor">
             <label for="inputPassword3">Studio:</label>
-            <input type="text" class="form-control" id="studio">
+            <input type="text" class="form-control" id="studio" name="studio" [(ngModel)]="date.studio" #studio="ngModel" required>
+             <!--Validations -->
+                <div *ngIf="studio.errors && (studio.dirty || studio.touched)" class="alert alert-danger">
+                <div [hidden]="!studio.errors.required">
+                  -Studio is required.
+                </div>
+              </div>
           </div>
         </div>
       </div>
 
 
       <div class="row">
-        <div class="col-6">
+        <div class="col-4">
           <div class="form-group">
             <label for="inputPassword3">Phone:</label>
-            <input type="text" class="form-control" id="phone">
+            <input type="text" class="form-control" id="phone" name="phone" minlength="6" maxlength="10" pattern="^[0-9]*$" [(ngModel)]="date.phone" #phone="ngModel" required>
+                <!--Validations-->
+                <div *ngIf="phone.errors && (phone.dirty || phone.touched)" class="alert alert-danger">
+                <div [hidden]="!phone.errors.required">
+                  -Phone is required.
+                </div>
+                <div [hidden]="!phone.errors.minlength">
+                 -Phone must be at least 6 characters long.
+                </div>
+                <div [hidden]="!phone.errors.pattern">
+                 -Only can write 0 - 9 numbers
+                </div>
+                </div>
+                <!--End Validation-->
+
           </div>
         </div>
-        <div class="col-6">
+
+        <div class="col-4">
           <div class="form-group">
             <label for="inputPassword3">Password:</label>
-            <input type="password" class="form-control" id="password">
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="newPassword" #password="ngModel" (keyup)="changePassword()" minlength="8">
+             
+             <!--Validations-->
+            <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger" >
+              <div [hidden]="!password.errors.minlength">
+                * Password must be at least 8 characters long.
+              </div>
+            </div>
+          <!--End Validation-->
+
           </div>
         </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="inputPassword3">Confirm Password:</label>
+            <input type="password" class="form-control" id="conPassword" name="conPassword"
+          [disabled]="newPassword == '' || password.errors"
+          [(ngModel)]="confPassword" #conPassword="ngModel">
+           <!--Validations-->
+            <div *ngIf="newPassword != '' && !password.errors && newPassword != confPassword" class="alert alert-danger">                            
+              * Password don't match'
+            </div>
+          <!--End Validation-->
+          </div>
+        </div>
+
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary" role="button">Register</button>
