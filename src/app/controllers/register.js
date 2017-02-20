@@ -6,6 +6,16 @@ import {Component} from '@angular/core';
   styleUrls: ['./app/styles/register.scss']
 })
 export class RegisterComponent {
+
+  date = {
+    name: '', lastName: '',
+    email: '', regional: '',
+    city: '', program: '',
+    card: '', center: '',
+    phone: '', password: '',
+    position: '', studio: ''
+  };
+
   tittle = 'Register of Users';
   form = false;
 
@@ -23,5 +33,12 @@ export class RegisterComponent {
         break;
     }
     this.isLearner = !this.isTutor;
+  }
+  newPassword = '';
+  confPassword= '';
+  changePassword() {
+    if (this.newPassword === '') {
+      this.confPassword = '';
+    }
   }
 }
