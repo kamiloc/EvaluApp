@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {routing, RootComponent} from './routes';
 import {NavBarComponent} from './controllers/nav-bar';
+import {FooterComponent} from './controllers/footer';
 // Sign in and Sign Up
 import {LoginComponent} from './controllers/login';
 import {RegisterComponent} from './controllers/register';
@@ -29,6 +30,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     RootComponent,
     NavBarComponent,
+    FooterComponent,
     HomeLearnerComponent,
     ProfileLearnerComponent,
     LoginComponent,
@@ -41,7 +43,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HomeLearnerComponent,
     NewBinnacleComponent
   ],
-  bootstrap: [RootComponent, NavBarComponent]
+  bootstrap: [RootComponent, NavBarComponent, FooterComponent]
 })
 
 export class AppModule { }
