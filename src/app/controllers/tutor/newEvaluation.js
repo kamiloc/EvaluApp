@@ -19,11 +19,27 @@ const learnersList = [Cristian, Duvan, Carlos, Daniel, Vanessa];
 @Component({
   selector: 'new-evaluation',
   template: require('../../views/tutor/newEvaluation.html'),
-  styleUrls: ['./app/styles/tutor/newEvaluation.scss']
+  styleUrls: ['./app/styles/tutor/newEvaluation.scss', './app/styles/learner/newBinnacle.scss']
 })
 export class NewEvaluationComponent {
+  alternative = [];
+  alternativeSelected = 2
+  alternativeChecked = false;
   constructor() {
     this.tittle = 'Make a new evaluation';
     this.Learners = learnersList;
+    this.page = 1;
+    this.alternative.map(() => false);
+  }
+  alternativeSlect() {
+    for (let i = 0; i <= this.alternative.length; i++) {
+      if (this.alternative[i]) {
+        this.alternativeSelected = i;
+      }
+    }
+    return this.alternativeSelected;
+  }
+  alternativeChange() {
+    this.alternativeChecked = !this.alternativeChecked;
   }
 }

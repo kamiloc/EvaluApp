@@ -8,6 +8,349 @@
     <option *ngFor="let Learner of Learners; let i = index" [value]="Learner.idLearner">
       Learner {{i+1}}: {{Learner.Name}} {{Learner.lastName}} from {{Learner.City}}
     </option>
-  </select>
-  
+    </select>
+</div>
+<div class="form container main-container">
+  <form>
+
+    <!--///////////////////////////////////// Section 1 ////////////////////////////////////////////////////-->
+
+    <h5 *ngIf="page === 1">1. GENERAL INFORMATION</h5>
+
+    <div *ngIf="page === 1" class="sect">
+
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+            <label>Regional:</label>
+            <input type="text" class="form-control" id="city" ngbPopover="Name of the Regional of Learner" popoverTitle="Training center"
+              triggers="mouseenter:mouseleave">
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="form-group">
+            <label>Center:</label>
+            <input type="text" class="form-control" id="center" ngbPopover="Name of the apprentice training center." popoverTitle="Training center"
+              triggers="mouseenter:mouseleave">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+
+        <div class="col-md-8">
+          <div class="form-group">
+            <label>Program:</label>
+            <input type="text" class="form-control" id="city" ngbPopover="Name of the city where the apprentice training center is located."
+              popoverTitle="Training center" triggers="mouseenter:mouseleave">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Group Card:</label>
+            <input type="text" class="form-control" id="name" ngbPopover="Name of the apprentice." popoverTitle="Apprentice" triggers="mouseenter:mouseleave">
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+
+        <div class="row" style="width: 30%; clear: left;">
+          <div class="col-lg-12 sub-row">
+            <label>Learner information:</label>
+          </div>
+        </div>
+
+        <div class="row" style="width: 70%">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Identification number:</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Learner's identification number'" popoverTitle="Description:"
+                triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Phone number" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>E-Mail:</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="row">
+
+        <div class="row" style="width: 30%; clear: left;">
+          <div class="col-lg-12 sub-row" style="padding-top: 70%">
+            <label>Company information:</label>
+          </div>
+        </div>
+
+        <div class="row" style="width: 70%">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the company" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Identification number:</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Legal identification number'" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Phone number" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Tutor name:</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Tutor position:</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Tutor phone:</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Tutor mail:</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+                <span class="input-group-addon" id="basic-addon2">@globant.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!--///////////////////////////////////// End section 1 ////////////////////////////////////////////////////-->
+
+    <!--///////////////////////////////////// Section 2 ////////////////////////////////////////////////////-->
+
+    <h5 *ngIf="page === 2">2. PLANNING PRODUCTIVE STAGE</h5>
+
+    <div *ngIf="page === 2" class="sect">
+      <br>
+      <h4 class="display-8">Alternative to make the productive stage</h4>
+      <br>
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">
+          <input type="checkbox" [disabled]="alternativeChecked && alternativeSlect() !== 0" [(ngModel)]="alternative[0]" #alternative1="ngModel"
+            name="alternative1" (change)="alternativeChange()">
+        </div>
+        <label class="form-control" id="inlineFormInputGroup">Learning contract</label>
+      </div>
+
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">
+          <input type="checkbox" [disabled]="alternativeChecked && alternativeSlect() !== 1" [(ngModel)]="alternative[1]" #alternative2="ngModel"
+            name="alternative2" (change)="alternativeChange()">
+        </div>
+        <label class="form-control" id="inlineFormInputGroup">Laboral or contractual linking</label>
+      </div>
+
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">
+          <input type="checkbox" [disabled]="alternativeChecked && alternativeSlect() !== 2" [(ngModel)]="alternative[2]" #alternative3="ngModel"
+            name="alternative3" (change)="alternativeChange()">
+        </div>
+        <label class="form-control" id="inlineFormInputGroup">Participation in a productive project in: the SENA, company, in a SENA's provider or in production of centers</label>
+      </div>
+
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">
+          <input type="checkbox" [disabled]="alternativeChecked && alternativeSlect() !== 3" [(ngModel)]="alternative[3]" #alternative4="ngModel"
+            name="alternative4" (change)="alternativeChange()">
+        </div>
+        <label class="form-control" id="inlineFormInputGroup">Support to a familiar productive unity</label>
+      </div>
+
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">
+          <input type="checkbox" [disabled]="alternativeChecked && alternativeSlect() !== 4" [(ngModel)]="alternative[4]" #alternative5="ngModel"
+            name="alternative5" (change)="alternativeChange()">
+        </div>
+        <label class="form-control" id="inlineFormInputGroup">Monitoring</label>
+      </div>
+
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">
+          <input type="checkbox" [disabled]="alternativeChecked && alternativeSlect() !== 5" [(ngModel)]="alternative[5]" #alternative6="ngModel"
+            name="alternative6" (change)="alternativeChange()">
+        </div>
+        <label class="form-control" id="inlineFormInputGroup">Support to a institute: state, national, territory, to an ONG or an non profit entity</label>
+      </div>
+
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">
+          <input type="checkbox" [disabled]="alternativeChecked && alternativeSlect() !== 6" [(ngModel)]="alternative[6]" #alternative7="ngModel"
+            name="alternative7" (change)="alternativeChange()">
+        </div>
+        <label class="form-control" id="inlineFormInputGroup">Intership</label>
+      </div>
+
+      <hr>
+      <br>
+      <h4 class="display-8">Agreement of the workplan for productive stage</h4>
+      <br>
+
+      <div class="row">
+        <div class="row aligned-row" style="width: 45%">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Activities to make</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <br>
+              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <br>
+              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+        </div>
+
+        <div class="row aligned-row" style="width: 20%">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Learning evidence</label>
+              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <br>
+              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <br>
+              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+            </div>
+          </div>
+        </div>
+
+        <div class="row aligned-row" style="width: 28%">
+          <div class="col-lg-12">
+
+            <div class="row">
+              <div class="row aligned-row" style="width: 48%">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label>Date</label>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                        <div class="input-group-addon" (click)="d.toggle()">
+                          <img src="../../img/learner/icon-calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                        </div>
+                      </div>
+                      <br>
+                      <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                        <div class="input-group-addon" (click)="d.toggle()">
+                          <img src="../../img/learner/icon-calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                        </div>
+                      </div>
+                      <br>
+                      <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                        <div class="input-group-addon" (click)="d.toggle()">
+                          <img src="../../img/learner/icon-calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row aligned-row" style="width: 48%">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label>Place</label>
+                    <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+                    <br>
+                    <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+                    <br>
+                    <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Observations</label>
+            <textarea type="text" class="form-control" id="observations" ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="firm">
+            <hr color="black">
+            <p class="text-center">Company firm</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="firm">
+            <hr color="black">
+            <p class="text-center">Learner firm</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="firm">
+            <hr color="black">
+            <p class="text-center">SENA Functionari firm</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--///////////////////////////////////// End section 2 ////////////////////////////////////////////////////-->
+  </form>
+
+  <div class="pagination">
+    <ngb-pagination [collectionSize]="30" [(page)]="page" [directionLinks]="false"></ngb-pagination>
+  </div>
+
 </div>
