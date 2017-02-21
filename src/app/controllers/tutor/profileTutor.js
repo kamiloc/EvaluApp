@@ -7,7 +7,7 @@ import {Tutor} from './classTutor';
   styleUrls: ['./app/styles/tutor/profileTutor.scss']
 })
 export class ProfileTutorComponent {
-  oldTutor = new Tutor('Gabriel', 'Martines', '489-1340', 'Web UI Developer', 'UX Desing',
+  oldTutor = new Tutor('Gabriel', 'Martines', '4891340', 'Web UI Developer', 'UX Desing',
   'gabriel.martinez', 'Male', '12345678');
   tutor = new Tutor();
   newPassword = '';
@@ -18,9 +18,24 @@ export class ProfileTutorComponent {
     this.isTutor = true;
     this.tutor = this.oldTutor;
   }
-  changePassword() {
+  onChangePassword() {
     if (this.newPassword === '') {
       this.confPassword = '';
     }
+  }
+  changedPassword() {
+    let disable = true;
+    if (this.newPassword === '') {
+      disable = false;
+    } else if (this.newPassword === this.confPassword) {
+      this.tutor.password = this.newPassword;
+      disable = false;
+    } else {
+      disable = true;
+    }
+    return disable;
+  }
+  cancel() {
+    window.location = 'homeTutor';
   }
 }

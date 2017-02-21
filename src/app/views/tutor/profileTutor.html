@@ -4,7 +4,7 @@
         <h1 class="display-4">{{tittle}}</h1>
     </div>
 
-    <form *ngIf='form'>
+    <form *ngIf='form' #myForm="ngForm">
         <div class="container-2">
             <div class="row">
                 <div class="col-5">
@@ -120,7 +120,7 @@
                         <label for="password">New Password:</label>
                         <input type="password" class="form-control" id="password" name="password"
                         minlength="8"
-                        [(ngModel)]="newPassword" #password="ngModel" (keyup)="changePassword()">
+                        [(ngModel)]="newPassword" #password="ngModel" (keyup)="onChangePassword()">
                         <!--Validations-->
                         <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger" >
                             <div [hidden]="!password.errors.minlength">
@@ -134,7 +134,7 @@
                     <div class="form-group">
                         <label for="conf-password">Confirm new password:</label>
                         <input type="password" class="form-control" id="conf-password" name="confirm"
-                        [disabled]="newPassword == '' || password.errors"
+                        [disabled]="newPassword == '' || password.errors " required
                         [(ngModel)]="confPassword" #confirm='ngModel'>
                         <!--Validations-->
                         <div *ngIf="newPassword != '' && !password.errors && newPassword != confPassword" class="alert alert-danger">                            
@@ -145,7 +145,12 @@
                 </div>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary" role="button">Save</button>
+                <button type="submit" class="btn btn-primary" role="button"
+                [disabled]="changedPassword() || !myForm.form.valid">
+                Update Profile</button>
+                <button class="btn btn-danger" (click)="cancel()" role="button">
+                Cancel
+                </button>
             </div>
         </div>
     </form>
