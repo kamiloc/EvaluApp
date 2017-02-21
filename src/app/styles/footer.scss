@@ -1,4 +1,9 @@
-.footer {
+.container {
+    width: 60%;
+}
+
+footer {
+    clear: both;
     position: relative;
     background-color: #292b2c;
     padding: 1.5% 0 1.5% 0;
@@ -9,7 +14,7 @@
 .icons {
     font-size: 30px;
     float: right;
-    margin: -1% 2% 0 0;
+    margin: -.5% 2% 0 0;
     text-align: center;
     width: 29%;
 }

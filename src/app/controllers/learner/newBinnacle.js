@@ -7,8 +7,10 @@ import {Component} from '@angular/core';
 })
 export class NewBinnacleComponent {
 
-  groupCard = '';
-  numDocument = '';
+  information = {
+    groupCard: '',
+    numDocument: ''
+  };
 
   tutor = {
     name: 'Gabriel Martines', phone: '489-1340',
