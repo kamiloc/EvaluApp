@@ -77,7 +77,7 @@
                     <div class="form-group">
                         <label>Number:</label>
                         <input type="text" class="form-control" id="document" name="document" required pattern="^[0-9]*$"
-                        [(ngModel)]="numDocument" #document="ngModel"
+                        [(ngModel)]="information.numDocument" #document="ngModel"
                         ngbPopover="Apprentice document number." 
                         popoverTitle="Apprentice"
                         triggers="mouseenter:mouseleave">
@@ -110,7 +110,7 @@
                     <div class="form-group">
                         <label>Group Card:</label>
                         <input type="text" class="form-control" id="card" name="card" minlength="6" required pattern="^[0-9]*$"
-                        [(ngModel)]="groupCard" #card="ngModel"
+                        [(ngModel)]="information.groupCard" #card="ngModel"
                         ngbPopover="Training program card number." 
                         popoverTitle="Apprentice"
                         triggers="mouseenter:mouseleave">
