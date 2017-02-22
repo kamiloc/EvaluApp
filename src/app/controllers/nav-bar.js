@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-const rol = 'Learner';
+const rol = 'Tutor';
 
 @Component({
   selector: 'nav-bar',

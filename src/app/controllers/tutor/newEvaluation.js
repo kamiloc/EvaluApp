@@ -15,7 +15,6 @@ const Daniel = new Learner('1032245664', 'Daniel', 'Fierro', 'daniel.fierro',
 const Vanessa = new Learner('10243334', 'Vanessa', 'Monsalve', 'vanessa.monsalve',
 '12345678', 'ANÁLISIS Y DESARROLLO DE SISTEMAS DE INFORACIÓN', 'Centro de la tecnología, el diseño y la productividad empresarial',
 '903465', 'Girardot', 'Cundinamarca', '3134645578', 'Male', 'gabriel.martinez');
-const learnersList = [Cristian, Duvan, Carlos, Daniel, Vanessa];
 @Component({
   selector: 'new-evaluation',
   template: require('../../views/tutor/newEvaluation.html'),
@@ -27,7 +26,7 @@ export class NewEvaluationComponent {
   alternativeChecked = false;
   constructor() {
     this.tittle = 'Make a new evaluation';
-    this.Learners = learnersList;
+    this.Learners = [Cristian, Duvan, Carlos, Daniel, Vanessa];
     this.page = 1;
     this.alternative.map(() => false);
   }
