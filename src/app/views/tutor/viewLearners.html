@@ -1,6 +1,48 @@
-<div class="container main-container jumb">
-<div class="jumbotron">
-    <h1 class="display-3">{{tittle}}</h1>
-    <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<div class="container main-container jumb text-center">
+    <div class="jumbotron">
+        <h1 class="display-3">{{tittle}}</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    </div>
 </div>
+
+<div class="container">
+
+    <table class="table">
+        <tr>
+            <th class="text-center">#</th>
+            <th class="text-center">Name of the apprentice</th>
+            <th class="text-center">Identification number</th>
+            <th colspan="2" class="text-center">Options</th>
+        </tr>
+
+        <tr *ngFor="let Learner of Learners; let i = index" class="text-center">
+            <td>{{i+1}}</td>
+            <td>{{Learner.Name}} {{Learner.lastName}}</td>
+            <td>{{Learner.idLearner}}</td>
+            <td><a href="/editLearners"><button class="btn btn-primary">Edit</button></a></td>
+            <td><button class="btn btn-success" (click)="isCollapsed = !isCollapsed; More = Learner.idLearner"
+                [attr.aria-expanded]="!isCollapsed" aria-controls="collapse">View More</button></td>
+        </tr>
+    </table>
+
+    <div *ngFor="let Learner of Learners">
+
+        <div id="collapse" [ngbCollapse]="isCollapsed" class="col-md-12 info" *ngIf="More === Learner.idLearner">
+
+            <div class="card">
+                <div class="card-block">
+                    <h3 class="learner">{{Learner.Name}} {{Learner.lastName}}</h3>
+                    {{Learner.Program}}<br>
+                    {{Learner.groupCard}}<br>
+                    {{Learner.trainingCenter}}<br>
+                    {{Learner.Regional}}<br>
+                    {{Learner.Email}}@globant.com<br>
+                    {{Learner.Phone}}
+                </div>
+                <img src="../../img/background.png">
+            </div>
+
+        </div>
+    </div>
+
 </div>

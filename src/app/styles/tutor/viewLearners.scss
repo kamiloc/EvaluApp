@@ -1,0 +1,24 @@
+button {
+    cursor: pointer;
+}
+
+.info {
+    margin: 5% 0 7% 0;
+    text-align: center;
+}
+
+.card {
+    border: 10px solid #ccc;
+    border-radius: 20px;
+    border-style: inset;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.card img {
+    opacity: .09;
+    height: auto;
+    width: 40%;
+    position: absolute;
+    margin: 0 27.5%;
+}

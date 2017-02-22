@@ -3,12 +3,11 @@
     <h1 class="display-4" style="text-align: center">{{tittle}}</h1>
   </div>
   <p class="lead text-muted" style="text-align: center">For start please chose a Learner of the list:</p>
-  <select class=" dropdown btn btn-secondary btn-lg btn-block dropdown-toggle custom-drop-down" required [(ngModel)]="Learners"
-    name="learners" #learners="ngModel">
+  <select class=" dropdown btn btn-secondary btn-lg btn-block dropdown-toggle custom-drop-down" required>
     <option *ngFor="let Learner of Learners; let i = index" [value]="Learner.idLearner">
       Learner {{i+1}}: {{Learner.Name}} {{Learner.lastName}} from {{Learner.City}}
     </option>
-    </select>
+  </select>
 </div>
 <div class="form container main-container">
   <form>
