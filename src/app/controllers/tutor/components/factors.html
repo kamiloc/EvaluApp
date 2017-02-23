@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title mb-0" (click)="collapsed[item.number] = !collapsed[item.number]"># {{item.title}}</h4>
+    <div id="collapseDiv" [ngbCollapse]="collapsed[item.number]">
+      <br>
+      <p class="card-text">{{item.body}}</p>
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <label>Rate:</label>
+        </div>
+
+        <div class="col-md-4">
+
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon">
+              <input type="checkbox">
+            </div>
+            <label class="form-control" id="inlineFormInputGroup">Satisfactory</label>
+          </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon">
+              <input type="checkbox">
+            </div>
+            <label class="form-control" id="inlineFormInputGroup">For improve</label>
+          </div>
+
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Observations</label>
+            <textarea type="text" class="form-control"></textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
