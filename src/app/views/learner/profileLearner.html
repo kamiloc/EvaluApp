@@ -9,7 +9,7 @@
 
 <div class="container main-container form">
 
-  <form class="text-style">
+  <form class="text-style" #myForm="ngForm">
 
     <div class="row">
       <div class="col-md-6">
@@ -138,7 +138,7 @@
         <div class="form-group">
           <label>New Password:</label>
           <input type="password" class="form-control" id="password" name="password"
-          [(ngModel)]="newPassword" #password="ngModel" (keyup)="changePassword()" minlength="8">
+          [(ngModel)]="newPassword" #password="ngModel" (keyup)="onChangePassword()" minlength="8">
 
           <!--Validations-->
             <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger" >
@@ -155,7 +155,7 @@
         <div class="form-group">
           <label>Confirm Password:</label>
           <input type="password" class="form-control" id="conPassword" name="conPassword"
-          [disabled]="newPassword == '' || password.errors"
+          [disabled]="newPassword == '' || password.errors" required
           [(ngModel)]="confPassword" #conPassword="ngModel">
 
           <!--Validations-->
@@ -168,8 +168,10 @@
       </div>
     </div>
 
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Save</button>
+    <div class="form-group buttons">
+        <button type="submit" class="btn btn-primary" role="button"
+        [disabled]="changePassword || !myForm.form.valid">Update Profile</button>
+        <button class="btn btn-danger" (click)="cancel()" role="button">Cancel</button>
     </div>
 
   </form>

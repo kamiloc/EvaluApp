@@ -22,10 +22,25 @@ export class ProfileLearnerComponent {
     this.isLearner = true;
   }
 
-  changePassword() {
+  onChangePassword() {
     if (this.newPassword === '') {
       this.confPassword = '';
     }
+  }
+  changedPassword() {
+    let disable = true;
+    if (this.newPassword === '') {
+      disable = false;
+    } else if (this.newPassword === this.confPassword) {
+      this.tutor.password = this.newPassword;
+      disable = false;
+    } else {
+      disable = true;
+    }
+    return disable;
+  }
+  cancel() {
+    window.location = 'homeLearner';
   }
 
 }
