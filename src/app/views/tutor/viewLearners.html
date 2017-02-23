@@ -19,9 +19,9 @@
             <td>{{i+1}}</td>
             <td>{{Learner.Name}} {{Learner.lastName}}</td>
             <td>{{Learner.idLearner}}</td>
-            <td><a href="/editLearners"><button class="btn btn-primary">Edit</button></a></td>
             <td><button class="btn btn-success" (click)="isCollapsed = !isCollapsed; More = Learner.idLearner"
                 [attr.aria-expanded]="!isCollapsed" aria-controls="collapse">View More</button></td>
+            <td><a href=""><button class="btn btn-danger" disabled>Delete</button></a></td>
         </tr>
     </table>
 

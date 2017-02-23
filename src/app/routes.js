@@ -8,7 +8,6 @@ import {HomeTutorComponent} from './controllers/tutor/homeTutor';
 import {NewEvaluationComponent} from './controllers/tutor/newEvaluation';
 import {ProfileTutorComponent} from './controllers/tutor/profileTutor';
 import {ViewLearnersComponent} from './controllers/tutor/viewLearners';
-import {EditLearnersComponent} from './controllers/tutor/editLearners';
 //  LearnerComponents
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
 import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
@@ -49,10 +48,6 @@ export const routes = [
   {
     path: 'viewLearners',
     component: ViewLearnersComponent
-  },
-  {
-    path: 'editLearners',
-    component: EditLearnersComponent
   },
   {
     path: 'homeLearner',

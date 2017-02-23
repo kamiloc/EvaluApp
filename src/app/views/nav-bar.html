@@ -17,15 +17,11 @@
           <li class="nav-item" *ngIf="isTutor">
             <a class="nav-link" href="/newEvaluation">{{elements.firstView}}</a>
           </li>
-          <li class="nav-item dropdown" *ngIf="isTutor">
-            <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{elements.secondView[0]}}</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="/viewLearners">{{elements.secondView[1]}}</a>
-              <a class="dropdown-item" href="/editLearners">{{elements.secondView[2]}}</a>
-            </div>
+          <li class="nav-item" *ngIf="isTutor">
+            <a class="nav-link" href="/viewLearners">{{elements.secondView}}</a>
           </li>
           <li class="nav-item" *ngIf="isTutor">
-            <a class="nav-link" href="/profileTutor" >{{elements.thirdView}}</a>
+            <a class="nav-link" href="/profileTutor">{{elements.thirdView}}</a>
           </li>
           <li class="nav-item" *ngIf="isLearner">
             <a class="nav-link" href="/newBinnacle">{{elements.fourthView}}</a>
