@@ -30,3 +30,17 @@ footer {
     color: #fff;
     text-decoration: none;
 }
+
+.text {
+    color: #292b2c;
+    background-color: #fff;
+    padding: .5% 1%;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.text:hover {
+    color: #fff;
+    background-color: #292b2c;
+    border: 2px solid #fff;
+}
