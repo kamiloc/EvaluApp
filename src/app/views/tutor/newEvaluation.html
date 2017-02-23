@@ -424,54 +424,12 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title mb-0" (click)="collapsed[0] = !collapsed[0]"># Intership relations</h4>
-              <div id="collapseDiv" [ngbCollapse]="collapsed[0]">
-                <br>
-                <p class="card-text">Develops interpersonal relations with the people of the different levels of the conforming entity in a harmonious,
-                  respectful and framed form within the principles of social coexistence.</p>
 
-                <div class="row">
-
-                  <div class="col-md-4">
-                    <label>Rate:</label>
-                  </div>
-
-                  <div class="col-md-4">
-
-                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                      <div class="input-group-addon">
-                        <input type="checkbox">
-                      </div>
-                      <label class="form-control" id="inlineFormInputGroup">Satisfactory</label>
-                    </div>
-
-                  </div>
-
-                  <div class="col-md-4">
-
-                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                      <div class="input-group-addon">
-                        <input type="checkbox">
-                      </div>
-                      <label class="form-control" id="inlineFormInputGroup">For improve</label>
-                    </div>
-
-                  </div>
-
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Observations</label>
-                      <textarea type="text" class="form-control"></textarea>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <factor [item]="acttituteFactors[0]"></factor>
+          <factor [item]="acttituteFactors[1]"></factor>
+          <factor [item]="acttituteFactors[2]"></factor>
+          <factor [item]="acttituteFactors[3]"></factor>
+          <factor [item]="acttituteFactors[4]"></factor>
 
         </div>
 
@@ -495,57 +453,31 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title mb-0" (click)="collapsed1[0] = !collapsed1[0]"># Transfer of knowledge</h4>
-              <div id="collapseDiv" [ngbCollapse]="collapsed1[0]">
-                <br>
-                <p class="card-text">Demonstrates the specific competencies of the training program in real work situations.</p>
 
-                <div class="row">
-
-                  <div class="col-md-4">
-                    <label>Rate:</label>
-                  </div>
-
-                  <div class="col-md-4">
-
-                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                      <div class="input-group-addon">
-                        <input type="checkbox">
-                      </div>
-                      <label class="form-control" id="inlineFormInputGroup">Satisfactory</label>
-                    </div>
-
-                  </div>
-
-                  <div class="col-md-4">
-
-                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                      <div class="input-group-addon">
-                        <input type="checkbox">
-                      </div>
-                      <label class="form-control" id="inlineFormInputGroup">For improve</label>
-                    </div>
-
-                  </div>
-
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Observations</label>
-                      <textarea type="text" class="form-control"></textarea>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <factor [item]="tecFactors[0]"></factor>
+          <factor [item]="tecFactors[1]"></factor>
+          <factor [item]="tecFactors[2]"></factor>
+          <factor [item]="tecFactors[3]"></factor>
+          <factor [item]="tecFactors[4]"></factor>
+          <factor [item]="tecFactors[5]"></factor>
+          <factor [item]="tecFactors[6]"></factor>
+          <factor [item]="tecFactors[7]"></factor>
 
         </div>
 
+      </div>
 
+      <br>
+      <hr>
+      <br>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Tutor observations</label>
+            <textarea type="text" class="form-control"></textarea>
+          </div>
+        </div>
       </div>
 
     </div>

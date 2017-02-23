@@ -34,6 +34,71 @@ export class NewEvaluationComponent {
     this.Learners = [Cristian, Duvan, Carlos, Daniel, Vanessa];
     this.page = 1;
     this.alternative.map(() => false);
+    this.acttituteFactors = [{
+      title: 'Intership relations',
+      body: 'Develops interpersonal relations with the people of the different levels of the conforming entity in a harmonious, respectful and framed form within the principles of social coexistence.',
+      number: 0
+    },
+    {
+      title: 'Team Work',
+      body: 'Participates actively and purposefully in work teams assuming roles, according to their strengths.',
+      number: 1
+    },
+    {
+      title: 'Problems Solution',
+      body: 'Proposes alternatives of solution to problematic situations, in the context of the development of its productive stage.',
+      number: 2
+    },
+    {
+      title: 'Accomplishment',
+      body: 'Assumes commitments of the functions and responsibilities assigned in the development of their work.',
+      number: 3
+    },
+    {
+      title: 'Organization',
+      body: 'Demonstrates ability to order and arrange the necessary elements and information to facilitate the execution of a work and the achievement of the objectives.',
+      number: 4
+    }];
+    this.tecFactors = [{
+      title: 'Transfer of knowledge',
+      body: 'Demonstrates the specific competencies of the training program in real work situations.',
+      number: 0
+    },
+    {
+      title: 'Continuous improvement',
+      body: 'It contributes to the improvement of the own processes of its performance.',
+      number: 1
+    },
+    {
+      title: 'Occupational strength',
+      body: 'Self-management actions that strengthen your occupational profile within the framework of your life project.',
+      number: 2
+    },
+    {
+      title: 'Opportunity and quality',
+      body: 'Presents with opportunity and quality the products generated in the development of its functions and activities.',
+      number: 3
+    },
+    {
+      title: 'Environmental responsibility',
+      body: 'It manages the resources for the development of its activities with criteria of environmental responsibility.',
+      number: 4
+    },
+    {
+      title: 'Resource management',
+      body: 'It uses in a rational way the materials, equipment and tools supplied for the performance of its activities or functions.',
+      number: 5
+    },
+    {
+      title: 'Occupational and industrial safety',
+      body: 'It uses the elements of occupational health and safety in accordance with the current regulations established for its activities or functions.',
+      number: 6
+    },
+    {
+      title: 'Production stage documentation',
+      body: 'Permanently updates the portfolio of evidence.',
+      number: 7
+    }];
   }
   alternativeSlect() {
     for (let i = 0; i <= this.alternative.length; i++) {

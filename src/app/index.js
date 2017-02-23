@@ -12,6 +12,7 @@ import {HomeTutorComponent} from './controllers/tutor/homeTutor';
 import {NewEvaluationComponent} from './controllers/tutor/newEvaluation';
 import {ProfileTutorComponent} from './controllers/tutor/profileTutor';
 import {ViewLearnersComponent} from './controllers/tutor/viewLearners';
+import {FactorsComponent} from './controllers/tutor/components/factors';
 //  Learner Components
 import {HomeLearnerComponent} from './controllers/learner/homeLearner';
 import {ProfileLearnerComponent} from './controllers/learner/profileLearner';
@@ -37,6 +38,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HomeTutorComponent,
     NewEvaluationComponent,
     ProfileTutorComponent,
+    FactorsComponent,
     ViewLearnersComponent,
     HomeLearnerComponent,
     NewBinnacleComponent

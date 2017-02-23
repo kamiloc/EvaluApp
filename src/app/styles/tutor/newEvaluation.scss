@@ -27,3 +27,12 @@ h5 {
   margin: 0 1% 0 1%;
   text-align: center;
 }
+
+.card h4 {
+    text-align: center;
+}
+
+.card h4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
