@@ -24,6 +24,11 @@ export class NewEvaluationComponent {
   alternative = [];
   alternativeSelected = 2
   alternativeChecked = false;
+  informSelected = false;
+  informType1 = false;
+  informType2 = false;
+  collapsed = [true, true, true, true];
+  collapsed1 = [true, true, true, true, true, true, true];
   constructor() {
     this.tittle = 'Make a new evaluation';
     this.Learners = [Cristian, Duvan, Carlos, Daniel, Vanessa];

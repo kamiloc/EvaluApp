@@ -3,7 +3,7 @@
     <h1 class="display-4" style="text-align: center">{{tittle}}</h1>
   </div>
   <p class="lead text-muted" style="text-align: center">For start please chose a Learner of the list:</p>
-  <select class=" dropdown btn btn-secondary btn-lg btn-block dropdown-toggle custom-drop-down" required >
+  <select class=" dropdown btn btn-secondary btn-lg btn-block dropdown-toggle custom-drop-down" required>
     <option *ngFor="let learner of Learners" [ngValue]="learner.idLearner">
       {{learner.Name}} {{learner.lastName}} from {{learner.City}}
     </option>
@@ -22,15 +22,14 @@
         <div class="col-md-5">
           <div class="form-group">
             <label>Regional:</label>
-            <input type="text" class="form-control" id="city" ngbPopover="Name of the Regional of Learner" popoverTitle="Training center"
-              triggers="mouseenter:mouseleave">
+            <input type="text" class="form-control" ngbPopover="Name of the Regional of Learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
           </div>
         </div>
 
         <div class="col-md-7">
           <div class="form-group">
             <label>Center:</label>
-            <input type="text" class="form-control" id="center" ngbPopover="Name of the apprentice training center." popoverTitle="Training center"
+            <input type="text" class="form-control" ngbPopover="Name of the apprentice training center." popoverTitle="Description:"
               triggers="mouseenter:mouseleave">
           </div>
         </div>
@@ -42,15 +41,15 @@
         <div class="col-md-8">
           <div class="form-group">
             <label>Program:</label>
-            <input type="text" class="form-control" id="city" ngbPopover="Name of the city where the apprentice training center is located."
-              popoverTitle="Training center" triggers="mouseenter:mouseleave">
+            <input type="text" class="form-control" ngbPopover="Formation program of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="form-group">
             <label>Group Card:</label>
-            <input type="text" class="form-control" id="name" ngbPopover="Name of the apprentice." popoverTitle="Apprentice" triggers="mouseenter:mouseleave">
+            <input type="text" class="form-control" ngbPopover="Number of the group where the learner was study" popoverTitle="Description:"
+              triggers="mouseenter:mouseleave">
           </div>
         </div>
       </div>
@@ -69,26 +68,25 @@
           <div class="col-lg-12">
             <div class="form-group">
               <label>Name:</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-lg-12">
             <div class="form-group">
               <label>Identification number:</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Learner's identification number'" popoverTitle="Description:"
-                triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Learner's identification number" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-lg-12">
             <div class="form-group">
               <label>Phone</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Phone number" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Phone number" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-lg-12">
             <div class="form-group">
               <label>E-Mail:</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
         </div>
@@ -109,44 +107,44 @@
           <div class="col-lg-12">
             <div class="form-group">
               <label>Name:</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the company" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Complete name of the company" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label>Identification number:</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Legal identification number'" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Legal identification number'" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label>Phone</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Phone number" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Phone number" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label>Tutor name:</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Tutor´s complete name" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label>Tutor position:</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Position in the company" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label>Tutor phone:</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Work or personal phone" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
               <label>Tutor mail:</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="name" ngbPopover="Email of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+                <input type="text" class="form-control" ngbPopover="Tutor´s mail" popoverTitle="Description:" triggers="mouseenter:mouseleave">
                 <span class="input-group-addon" id="basic-addon2">@globant.com</span>
               </div>
             </div>
@@ -232,11 +230,11 @@
           <div class="col-lg-12">
             <div class="form-group">
               <label>Activities to make</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Activities made for the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
               <br>
-              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Activities made for the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
               <br>
-              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Activities made for the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
         </div>
@@ -245,11 +243,11 @@
           <div class="col-lg-12">
             <div class="form-group">
               <label>Learning evidence</label>
-              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Evidences of made activity" popoverTitle="Description:" triggers="mouseenter:mouseleave">
               <br>
-              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Evidences of made activity" popoverTitle="Description:" triggers="mouseenter:mouseleave">
               <br>
-              <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+              <input type="text" class="form-control" ngbPopover="Evidences of made activity" popoverTitle="Description:" triggers="mouseenter:mouseleave">
             </div>
           </div>
         </div>
@@ -264,23 +262,23 @@
                     <label>Date</label>
                     <div class="form-group">
                       <div class="input-group">
-                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-                        <div class="input-group-addon" (click)="d.toggle()">
-                          <img src="../../img/learner/icon-calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="d1" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker">
+                        <div class="input-group-addon" (click)="d1.toggle()">
+                          <img src="../../img/learner/icon-calendar.png" style="width: .1rem; height: .1rem; cursor: pointer;" />
                         </div>
                       </div>
                       <br>
                       <div class="input-group">
-                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-                        <div class="input-group-addon" (click)="d.toggle()">
-                          <img src="../../img/learner/icon-calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="d2" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
+                        <div class="input-group-addon" (click)="d2.toggle()">
+                          <img src="../../img/learner/icon-calendar.png" style="width: .1rem; height: .1rem; cursor: pointer;" />
                         </div>
                       </div>
                       <br>
                       <div class="input-group">
-                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-                        <div class="input-group-addon" (click)="d.toggle()">
-                          <img src="../../img/learner/icon-calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="d3" [(ngModel)]="model3" ngbDatepicker #d3="ngbDatepicker">
+                        <div class="input-group-addon" (click)="d3.toggle()">
+                          <img src="../../img/learner/icon-calendar.png" style="width: .1rem; height: .1rem; cursor: pointer;" />
                         </div>
                       </div>
                     </div>
@@ -292,11 +290,11 @@
                 <div class="col-lg-12">
                   <div class="form-group">
                     <label>Place</label>
-                    <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+                    <input type="text" class="form-control" ngbPopover="Where made the activity" popoverTitle="Description:" triggers="mouseenter:mouseleave">
                     <br>
-                    <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+                    <input type="text" class="form-control" ngbPopover="Where made the activity" popoverTitle="Description:" triggers="mouseenter:mouseleave">
                     <br>
-                    <input type="text" class="form-control" id="name" ngbPopover="Complete name of the learner" popoverTitle="Description:" triggers="mouseenter:mouseleave">
+                    <input type="text" class="form-control" ngbPopover="Where made the activity" popoverTitle="Description:" triggers="mouseenter:mouseleave">
                   </div>
                 </div>
               </div>
@@ -313,7 +311,7 @@
         <div class="col-md-12">
           <div class="form-group">
             <label>Observations</label>
-            <textarea type="text" class="form-control" id="observations" ></textarea>
+            <textarea type="text" class="form-control"></textarea>
           </div>
         </div>
       </div>
@@ -346,10 +344,216 @@
       </div>
     </div>
     <!--///////////////////////////////////// End section 2 ////////////////////////////////////////////////////-->
+
+    <!--///////////////////////////////////// Section 3 ////////////////////////////////////////////////////-->
+    <h5 *ngIf="page === 3">3. FOLLOWING AND EVALUATE OF THE PRODUCTIVE STAGE</h5>
+
+    <div *ngIf="page === 3" class="sect">
+      <br>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h4 class="display-8">Inform type</h4>
+
+          <div class="row">
+            <div class="col-md-5">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">
+                  <input type="checkbox" [disabled]="informSelected && informType2" [(ngModel)]="informType1" #inform1="ngModel" name="inform1"
+                    (change)="informSelected = !informSelected">
+                </div>
+                <label class="form-control" id="inlineFormInputGroup">Partial</label>
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">
+                  <input type="checkbox" [disabled]="informSelected && informType1" [(ngModel)]="informType2" #inform2="ngModel" name="inform2"
+                    (change)="informSelected = !informSelected">
+                </div>
+                <label class="form-control" id="inlineFormInputGroup">Final</label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="col-md-6">
+          <h4 class="display-8">Evaluated period</h4>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd" name="d4" [(ngModel)]="model4" ngbDatepicker #d4="ngbDatepicker">
+                <div class="input-group-addon" (click)="d4.toggle()">
+                  <img src="../../img/learner/icon-calendar.png" style="width: 1rem; height: 1rem; cursor: pointer;" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd" name="d5" [(ngModel)]="model5" ngbDatepicker #d5="ngbDatepicker">
+                <div class="input-group-addon" (click)="d5.toggle()">
+                  <img src="../../img/learner/icon-calendar.png" style="width: 1rem; height: 1rem; cursor: pointer;" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <br>
+      <hr>
+      <br>
+
+
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <h5>ATTITUDE AND BEHAVIOR FACTORS</h5>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title mb-0" (click)="collapsed[0] = !collapsed[0]"># Intership relations</h4>
+              <div id="collapseDiv" [ngbCollapse]="collapsed[0]">
+                <br>
+                <p class="card-text">Develops interpersonal relations with the people of the different levels of the conforming entity in a harmonious,
+                  respectful and framed form within the principles of social coexistence.</p>
+
+                <div class="row">
+
+                  <div class="col-md-4">
+                    <label>Rate:</label>
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon">
+                        <input type="checkbox">
+                      </div>
+                      <label class="form-control" id="inlineFormInputGroup">Satisfactory</label>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon">
+                        <input type="checkbox">
+                      </div>
+                      <label class="form-control" id="inlineFormInputGroup">For improve</label>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Observations</label>
+                      <textarea type="text" class="form-control"></textarea>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+      <br>
+      <hr>
+      <br>
+
+
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <h5>TECHNICAL FACTORS</h5>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title mb-0" (click)="collapsed1[0] = !collapsed1[0]"># Transfer of knowledge</h4>
+              <div id="collapseDiv" [ngbCollapse]="collapsed1[0]">
+                <br>
+                <p class="card-text">Demonstrates the specific competencies of the training program in real work situations.</p>
+
+                <div class="row">
+
+                  <div class="col-md-4">
+                    <label>Rate:</label>
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon">
+                        <input type="checkbox">
+                      </div>
+                      <label class="form-control" id="inlineFormInputGroup">Satisfactory</label>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <div class="input-group-addon">
+                        <input type="checkbox">
+                      </div>
+                      <label class="form-control" id="inlineFormInputGroup">For improve</label>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Observations</label>
+                      <textarea type="text" class="form-control"></textarea>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+    <!--///////////////////////////////////// End section 3 ////////////////////////////////////////////////////-->
   </form>
 
   <div class="pagination">
-    <ngb-pagination [collectionSize]="30" [(page)]="page" [directionLinks]="false"></ngb-pagination>
+    <ngb-pagination [collectionSize]="30" [(page)]="page" [directionLinks]="false" size="lg"></ngb-pagination>
   </div>
 
 </div>
