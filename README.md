@@ -10,7 +10,7 @@ La aplicación requiere [Node.js](https://nodejs.org/) v4+ y [Gulp.js](http://gu
 Instalar las dependencias y las devDependencies luego iniciar el servidor:
 
 ```sh
-$ git clone https://github.com/kamiloc/domicilios-test.git
+$ git clone https://github.com/kamiloc/EvaluApp.git
 $ cd EvaluApp
 $ npm install -d
 ```
